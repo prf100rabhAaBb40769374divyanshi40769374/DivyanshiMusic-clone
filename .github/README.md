@@ -1,5 +1,5 @@
 <h2 align="center">
-    ──「 ᴢᴇɪx ダ ᴍᴜsɪᴄ 」──
+    ──「 нɪɴᴀᴛᴀ ꭙ ᴍᴜsɪᴄ 」──
 </h2>
 
 <p align="center">
@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/TeamProBots/ZeixBots"><img src="https://img.shields.io/github/stars/TeamProBots/ZeixBots?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/TeamProBots/ZeixBots/network/members"> <img src="https://img.shields.io/github/forks/TeamProBots/ZeixBots?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/TeamProBots/ZeixBots/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/TEAMPURVI/HINATA"><img src="https://img.shields.io/github/stars/TeamProBots/ZeixBots?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/TEAMPURVI/HINATA/network/members"> <img src="https://img.shields.io/github/forks/TEAMPURVI/HINATA?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/TEAMPURVI/HINATA/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
-<a href="https://github.com/TeamProBots/ZeixBots/commits?author=yasirakhtar"> <img src="https://img.shields.io/github/last-commit/TeamProBots/ZeixBots?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/TEAMPURVI/HINATA/commits?author=yasirakhtar"> <img src="https://img.shields.io/github/last-commit/TeamProBots/ZeixBots?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TeamProBots/ZeixBots"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TEAMPURVI/HINATA"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
 
 
 
@@ -30,7 +30,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
 
-<p align="center"><a href="https://app.koyeb.com/deploy?name=ZeixBots&type=git&repository=TeamProBots%2FZeixBots&branch=main&builder=dockerfile"> <img src="https://www.koyeb.com/static/images/deploy/button.svg"></a></p>
+<p align="center"><a href="https://app.koyeb.com/deploy?name=hinata&type=git&repository=TEAMPURVI%2FHINATA&branch=main&builder=dockerfile"> <img src="https://www.koyeb.com/static/images/deploy/button.svg"></a></p>
 
 ---
 
@@ -55,7 +55,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/TeamProBots/ZeixBots && cd ZeixBots
+   git clone https://github.com/TEAMPURVI/HINATA && cd HINATA
    ```
 6. **Install Requirements**
    ```bash
@@ -86,7 +86,7 @@
 
 ### 🛠 Commands & Usage
 
-The ZeiX Bot offers a range of commands to enhance your music listening experience on Telegram:
+The Hinata Bot offers a range of commands to enhance your music listening experience on Telegram:
 
 | Command                 | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -97,7 +97,7 @@ The ZeiX Bot offers a range of commands to enhance your music listening experien
 | `/stop`                 | Stop the bot and clear the queue.           |
 | `/queue`                | Display the list of songs in the queue.     |
 
-For a full list of commands, use `/help` in [telegram](https://t.me/ZeixBot).
+For a full list of commands, use `/help` in [telegram](https://t.me/HinataMusic_Robot).
 
 ---
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -107,9 +107,9 @@ For a full list of commands, use `/help` in [telegram](https://t.me/ZeixBot).
 </h3>
 
 <p align="center">
-<a href="https://t.me/+RY08ztxCIMpkNzk0"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/PURVI_UPDATES"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 <p align="center">
-<a href="https://t.me/ProBotts"><img src="https://img.shields.io/badge/-Update%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/PURVI_SUPPORT"><img src="https://img.shields.io/badge/-Update%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
