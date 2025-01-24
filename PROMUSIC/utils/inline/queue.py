@@ -93,16 +93,16 @@ def queuemarkup(_, vidid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="ʀᴇsᴜᴍ", callback_data=f"ADMIN Resume|{chat_id}"
+                text="ʀᴇsᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="ʀᴇᴘʟᴀ", callback_data=f"ADMIN Replay|{chat_id}"
+                text="ʀᴇᴘʟᴀʏ", callback_data=f"ADMIN Replay|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
                 text="๏ ᴍᴏʀᴇ ๏",
-                url="https://t.me/ProBotts",
+                url="https://t.me/PURVI_SUPPORT",
             ),
         ],
     ]
