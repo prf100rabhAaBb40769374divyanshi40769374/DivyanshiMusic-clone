@@ -1,5 +1,5 @@
 <h2 align="center">
-    ──「 нɪɴᴀᴛᴀ ꭙ ᴍᴜsɪᴄ 」──
+    ──「 Ꭾᴜʀꪜɪ ꭙ ᴍᴜsɪᴄ 」──
 </h2>
 
 <p align="center">
@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/TEAMPURVI/HINATA"><img src="https://img.shields.io/github/stars/TeamProBots/ZeixBots?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/TEAMPURVI/HINATA/network/members"> <img src="https://img.shields.io/github/forks/TEAMPURVI/HINATA?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/TEAMPURVI/HINATA/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/TEAMPURVI/PURVIV2"><img src="https://img.shields.io/github/stars/TeamProBots/ZeixBots?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/TEAMPURVI/PURVIV2/network/members"> <img src="https://img.shields.io/github/forks/TEAMPURVI/PURVIV2?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/TEAMPURVI/PURVIV2/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
-<a href="https://github.com/TEAMPURVI/HINATA/commits?author=yasirakhtar"> <img src="https://img.shields.io/github/last-commit/TeamProBots/ZeixBots?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/TEAMPURVI/PURVIV2/commits?author=yasirakhtar"> <img src="https://img.shields.io/github/last-commit/TeamProBots/ZeixBots?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TEAMPURVI/HINATA"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TEAMPURVI/PURVIV2"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
 
 
 
@@ -30,7 +30,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
 
-<p align="center"><a href="https://app.koyeb.com/deploy?name=hinata&type=git&repository=TEAMPURVI%2FHINATA&branch=main&builder=dockerfile"> <img src="https://www.koyeb.com/static/images/deploy/button.svg"></a></p>
+<p align="center"><a href="https://app.koyeb.com/deploy?name=purvi&type=git&repository=TEAMPURVI%2FPURVIV2&branch=master&builder=dockerfile"> <img src="https://www.koyeb.com/static/images/deploy/button.svg"></a></p>
 
 ---
 
@@ -55,7 +55,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/TEAMPURVI/HINATA && cd HINATA
+   git clone https://github.com/TEAMPURVI/PURVIV2 && cd PURVIV2
    ```
 6. **Install Requirements**
    ```bash
