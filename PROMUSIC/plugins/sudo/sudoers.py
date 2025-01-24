@@ -53,7 +53,7 @@ async def sudoers_list(client, message: Message):
     keyboard = [[InlineKeyboardButton("❍ ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ ❍", callback_data="check_sudo_list")]]
     reply_markups = InlineKeyboardMarkup(keyboard)
   
-    await message.reply_photo(photo="https://telegra.ph/file/98cd40557e35e40c26965.jpg", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
+    await message.reply_photo(photo="https://files.catbox.moe/iuimfy.jpg", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
     # await message.reply_video(video="https://telegra.ph/file/53391fc8ce8ce40cda97f.mp4", caption="**❍ ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ●**\n\n**❍ ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ ● ", reply_markup=reply_markups)
     
 
