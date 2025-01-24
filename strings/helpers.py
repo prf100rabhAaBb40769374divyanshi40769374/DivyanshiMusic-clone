@@ -152,35 +152,36 @@ HELP_15 = """
 
 # New Clone Bot
 CLONE_HELP = """
-<b><u>Cʟᴏɴᴇ ᴄᴏᴍᴍᴀɴᴅs :</b></u>
+<b><u>ᴄʟᴏɴᴇ ᴄᴏᴍᴍᴀɴᴅs :</b></u>
 
-<b><u>Aʟʟ Usᴇʀs :</b></u>
-/clone– Cʟᴏɴᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ ᴜsɪɴɢ ᴛʜᴇ Bᴏᴛ Tᴏᴋᴇɴ ғʀᴏᴍ BᴏᴛFᴀᴛʜᴇʀ.
+<b><u>ᴀʟʟ ᴜsᴇʀs :</b></u>
+/clone– ᴄʟᴏɴᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ ᴜsɪɴɢ ᴛʜᴇ Bᴏᴛ Tᴏᴋᴇɴ ғʀᴏᴍ BᴏᴛFᴀᴛʜᴇʀ.
 <b>ᴇxᴀᴍᴩʟᴇ:</b> <code>/clone token paste here</code>
 
-/rmbot – Dᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄʟᴏɴᴇᴅ ʙᴏᴛ.
+/rmbot – ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴄʟᴏɴᴇᴅ ʙᴏᴛ.
 <b>ᴇxᴀᴍᴩʟᴇ:</b> <code>/rmbot token paste here</code>
 
-/mybot – Cʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛs ʏᴏᴜ'ᴠᴇ ᴄʟᴏɴᴇᴅ.
+/mybot – ᴄʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛs ʏᴏᴜ'ᴠᴇ ᴄʟᴏɴᴇᴅ.
 
-<b><u>Fᴏʀ Sᴜᴅᴏᴇʀs :</b></u>
-/cloned – Cʜᴇᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ʙᴏᴛs ʜᴀᴠᴇ ʙᴇᴇɴ ᴄʟᴏɴᴇᴅ.
+<b><u>ғᴏʀ sᴜᴅᴏᴇʀs :</b></u>
+/cloned – ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ʙᴏᴛs ʜᴀᴠᴇ ʙᴇᴇɴ ᴄʟᴏɴᴇᴅ.
 """
 
 CLONE_HELP_2 = """
 <b><u>ᴄᴏᴍᴍᴀɴᴅs :</b></u>
 
-/clone – Cʟᴏɴᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ ғʀᴏᴍ @PurviMusicRobot.
+/clone – ᴄʟᴏɴᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ ғʀᴏᴍ @PurviMusicRobot.
 
-<b><u>Aʟʟ Usᴇʀs :</b></u>
-/mybot – Cʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛs ʏᴏᴜ’ᴠᴇ ᴄʟᴏɴᴇᴅ. [<a href="https://t.me/PurviMusicRobot">Ꭾᴜʀꪜɪ ꭙ ϻᴜsɪᴄ</a>]
-/botinfo – Oɴʟʏ ғᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀs ᴛᴏ ᴠɪᴇᴡ ʙᴏᴛ ɪɴғᴏ.
 
-<b><u>Pʀᴇᴍɪᴜᴍ Usᴇʀs :</b></u>
-/setchannel – Aᴅᴅ ʏᴏᴜʀ ᴏᴡɴ ᴄʜᴀɴɴᴇʟ ᴛᴏ ʏᴏᴜʀ ʙᴏᴛ.
-/setsupport – Aᴅᴅ ʏᴏᴜʀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴛᴏ ʏᴏᴜʀ ʙᴏᴛ.
-/broadcast – Sᴇɴᴅ ᴍᴇssᴀɢᴇs ᴛᴏ ᴀʟʟ ʏᴏᴜʀ ʙᴏᴛ's ᴜsᴇʀs. 
+<b><u>ᴀʟʟ ᴜsᴇʀs :</b></u>
+/mybot – ᴄʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛs ʏᴏᴜ’ᴠᴇ ᴄʟᴏɴᴇᴅ. [<a href="https://t.me/PurviMusicRobot">Ꭾᴜʀꪜɪ ꭙ ϻᴜsɪᴄ</a>]
+/botinfo – ᴏɴʟʏ ғᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀs ᴛᴏ ᴠɪᴇᴡ ʙᴏᴛ ɪɴғᴏ.
+
+<b><u>ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs :</b></u>
+/setchannel – ᴀᴅᴅ ʏᴏᴜʀ ᴏᴡɴ ᴄʜᴀɴɴᴇʟ ᴛᴏ ʏᴏᴜʀ ʙᴏᴛ.
+/setsupport – ᴀᴅᴅ ʏᴏᴜʀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴛᴏ ʏᴏᴜʀ ʙᴏᴛ.
+/broadcast – sᴇɴᴅ ᴍᴇssᴀɢᴇs ᴛᴏ ᴀʟʟ ʏᴏᴜʀ ʙᴏᴛ's ᴜsᴇʀs. 
 <b>ᴇxᴀᴍᴩʟᴇ:</b> <code>/broadcast -user ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ</code>
 
-<b><u>Mᴏʀᴇ ғᴇᴀᴛᴜʀᴇs ᴀᴅᴅᴇᴅ sᴏᴏɴ...</u></b>
+<b><u>ᴍᴏʀᴇ ғᴇᴀᴛᴜʀᴇs ᴀᴅᴅᴇᴅ sᴏᴏɴ...</u></b>
 """
