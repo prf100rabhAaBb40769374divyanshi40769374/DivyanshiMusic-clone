@@ -24,7 +24,7 @@ async def ping_clone(client: Client, message: Message, _):
         photo=PING_IMG_URL, caption=_["NO_CLONE_MSG"],
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("Cʟᴏɴᴇ Bᴏᴛ", url=APP_LINK)]
+                [InlineKeyboardButton("ɢᴏ ᴀɴᴅ ᴄʟᴏɴᴇ", url=APP_LINK)]
             ]
         )
     )
