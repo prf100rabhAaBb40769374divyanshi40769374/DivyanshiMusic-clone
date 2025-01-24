@@ -95,7 +95,7 @@ async def get_thumb(videoid):
         draw.ellipse([565 + red_length - 10, 380 - 10, 565 + red_length + 10, 380 + 10], fill="red")
         draw.text((565, 400), "00:00", (255, 255, 255), font=arial)
         draw.text((1080, 400), duration, (255, 255, 255), font=arial)
-        play_icons = Image.open("SONALI_MUSIC/assets/assets/play_icons.png").resize((580, 62))
+        play_icons = Image.open("PROMUSIC/assets/assets/play_icons.png").resize((580, 62))
         background.paste(play_icons, (565, 450), play_icons)
         stroke_width = 15
         stroke_color = (255, 255, 255)
