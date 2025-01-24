@@ -16,9 +16,9 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","ll_ALPHA_BABY_ll")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "HinataMusic_Robot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "PurviMusicRobot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "𝐇ɪηᴧᴛᴧ")
+BOT_NAME = getenv("BOT_NAME" , "Ꭾᴜʀꪜɪ ꭙ ϻᴜsɪᴄ˼ ♪")
 # ---------------------------------------------------------
 ASSUSERNAME = getenv("ASSUSERNAME" , "Alpha")
 # ---------------------------------------------------------
@@ -36,10 +36,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1002478982051))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002141133985))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7355202884))
+OWNER_ID = int(getenv("OWNER_ID", 8143754205))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 # config.py
@@ -54,9 +54,9 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/TEAMPURVI/HINATA",
+    "https://github.com/TEAMPURVI/PURVIV2",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # ----------------------------------------------------------------
