@@ -6,7 +6,7 @@ from pyrogram import *
 from pyrogram.types import *
 # from PROMUSIC.utils.pro_ban import admin_filter
 from config import OWNER_ID
-OWNER_ID = 7355202884
+OWNER_ID = 8143754205
 from pyrogram.types import ChatPrivileges
 from pyrogram.errors import RPCError
 
