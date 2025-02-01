@@ -1,5 +1,6 @@
 from pyrogram import filters
 from pyrogram.enums import ChatType
+from pyrogram.types import InputMediaVideo, InputMediaPhoto
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import (
     CallbackQuery,
@@ -92,9 +93,9 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
 async def gib_repo_callback(_, callback_query):
     await callback_query.edit_message_media(
         media=InputMediaVideo(
-            "https://files.catbox.moe/wv5h32.mp4", 
+            "https://files.catbox.moe/l6yoqu.mp4", 
             has_spoiler=True, 
-            caption="ʟᴜɴᴅ ʟᴇʟᴇ ᴍᴇʀᴀ ʀᴇᴘᴏ ᴋʏᴀ ᴋᴀʀᴇɢᴀ, ʟᴇɢᴀ ᴋʏᴀ ʙʜᴏsᴀᴅɪᴋᴇ"
+            caption="**ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ᴍᴜsɪᴄ ʙᴏᴛ ᴡᴀᴛᴄʜɪɴɢ ᴛʜᴇ ᴠɪᴅᴇᴏ ᴄᴀʀᴇғᴜʟʟʏ.**"
         ),
         reply_markup=InlineKeyboardMarkup(
             [
