@@ -304,4 +304,20 @@ async def list_cloned_bots(client, message, _):
         logging.exception(e)
         await message.reply_text("An error occurred while listing cloned bots.")
 
-#new
+#total clone
+@app.on_message(filters.command("totalbots"))
+@language
+async def list_cloned_bots(client, message, _):
+    try:
+        cloned_bots = list(clonebotdb.find())
+        if not cloned_bots:
+            await message.reply_text("No bots have been cloned yet.")
+            return
+
+        total_clones = len(cloned_bots)
+        text = f"**Tᴏᴛᴀʟ Cʟᴏɴᴇᴅ Bᴏᴛs: `{total_clones}`**\n\n"         
+
+        await message.reply_text(text)
+    except Exception as e:
+        logging.exception(e)
+        await message.reply_text("An error occurred while listing cloned bots.")
