@@ -93,18 +93,17 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
 @languageCB
 async def gib_repo(client, CallbackQuery, _):
     await CallbackQuery.edit_message_media(
-            "https://files.catbox.moe/teruue.mp4", 
-            has_spoiler=True, 
+        media=InputMediaVideo(
+            media="https://files.catbox.moe/teruue.mp4",
+            has_spoiler=True,
             caption="**ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ᴍᴜsɪᴄ ʙᴏᴛ ᴡᴀᴛᴄʜɪɴɢ ᴛʜᴇ ᴠɪᴅᴇᴏ ᴄᴀʀᴇғᴜʟʟʏ.**"
         ),
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(text="⌯ ʙᴧᴄᴋ ⌯", callback_data="settingsback_helper")],
-                    [InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="close")
-                ]
+                [InlineKeyboardButton(text="⌯ ʙᴧᴄᴋ ⌯", callback_data="settingsback_helper")],
+                [InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="close")]
             ]
-        ),
+        )
     )
 
 @app.on_callback_query(
