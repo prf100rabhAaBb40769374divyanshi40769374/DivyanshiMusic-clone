@@ -35,6 +35,7 @@ from PROMUSIC.utils.inline.settings import (
     vote_mode_markup,
 )
 from PROMUSIC.utils.inline.start import private_panel
+import config
 from config import BANNED_USERS, OWNER_ID
 
 
@@ -100,7 +101,7 @@ async def gib_repo(client, CallbackQuery, _):
         ),
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="⌯ ʙᴧᴄᴋ ⌯", callback_data="settingsback_helper")],
+                [InlineKeyboardButton(text="ᯓ𓆰꯭𝅃꯭🔥꯭𝝙꯭𝝸𝞀꯭𝗵꯭𝝰 ꯭𝝱꯭𝝰꯭𝝱𝝲꯭⟶᯦꯭💸꯭〞", user_id=config.OWNER_ID)],
                 [InlineKeyboardButton(text="⌯ ᴄʟσsє ⌯", callback_data="close")]
             ]
         )
