@@ -8,7 +8,6 @@ beautifulsoup4
 bs4
 cloudscraper
 deepai
-daxxhub
 dnspython
 emojis
 ffmpeg-python
@@ -39,6 +38,7 @@ pydub
 pyfiglet
 pykeyboard
 # pyrogram==2.0.106
+pyrofork
 git+https://github.com/KurimuzonAkuma/pyrogram.git
 python-dotenv
 python-telegram-bot==21.1.1
