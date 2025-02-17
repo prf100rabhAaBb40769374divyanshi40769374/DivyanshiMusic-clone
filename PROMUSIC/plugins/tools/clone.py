@@ -20,6 +20,7 @@ from PROMUSIC.utils.database.clonedb import has_user_cloned_any_bot
 from config import LOGGER_ID, CLONE_LOGGER
 import requests
 from PROMUSIC.utils.decorators.language import language
+from pyrogram.errors import PeerIdInvalid
 
 from datetime import datetime
 CLONES = set()
@@ -272,7 +273,6 @@ async def my_cloned_bots(client, message, _):
         await message.reply_text("An error occurred while fetching your cloned bots.")
 
 
-
 @app.on_message(filters.command("cloned"))
 @language
 async def list_cloned_bots(client, message, _):
@@ -286,13 +286,30 @@ async def list_cloned_bots(client, message, _):
         text = f"**Tᴏᴛᴀʟ Cʟᴏɴᴇᴅ Bᴏᴛs: `{total_clones}`**\n\n"
 
         for bot in cloned_bots:
+            user_id = bot.get("user_id")
+            if not user_id:
+                text += f"⚠️ **Bᴏᴛ ID:** `{bot['bot_id']}` - Owner ID not found.\n\n"
+                continue
 
-            # Fetch the bot owner's details using their user_id
-            owner = await client.get_users(bot['user_id'])
-            
-            # Prepare the profile link and first name
-            owner_name = owner.first_name
-            owner_profile_link = f"tg://user?id={bot['user_id']}"
+            try:
+                # पहले यूज़र से इंटरैक्ट करने की कोशिश करें
+                try:
+                    await client.send_message(user_id, "Hello! Bot is fetching your details.")
+                except Exception:
+                    pass  # अगर मैसेज भेजने में एरर आए तो उसे Ignore करें
+
+                # अब यूज़र की जानकारी प्राप्त करें
+                owner = await client.get_users(user_id)
+                owner_name = owner.first_name or "Unknown"
+                owner_profile_link = f"tg://user?id={user_id}"
+            except PeerIdInvalid:
+                logging.warning(f"PeerIdInvalid for user_id: {user_id}")
+                owner_name = "❌ Invalid User"
+                owner_profile_link = "#"
+            except Exception as err:
+                logging.exception(err)
+                owner_name = "⚠️ Error Fetching Owner"
+                owner_profile_link = "#"
 
             text += f"**Bᴏᴛ ID:** `{bot['bot_id']}`\n"
             text += f"**Bᴏᴛ Nᴀᴍᴇ:** {bot['name']}\n"
@@ -300,9 +317,11 @@ async def list_cloned_bots(client, message, _):
             text += f"**Oᴡɴᴇʀ:** [{owner_name}]({owner_profile_link})\n\n"
 
         await message.reply_text(text)
+
     except Exception as e:
         logging.exception(e)
         await message.reply_text("An error occurred while listing cloned bots.")
+
 
 #total clone
 @app.on_message(filters.command("totalbots"))
