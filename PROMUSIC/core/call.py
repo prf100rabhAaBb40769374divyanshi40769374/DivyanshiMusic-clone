@@ -471,7 +471,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
                 else:
-                    button = stream_markup(videoid, chat_id, _)
+                    button = stream_markup(videoid, chat_id)  # सिर्फ दो आर्गुमेंट पास करें
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=img,
