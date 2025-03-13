@@ -22,7 +22,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/RAUSHAN-SONALI-143/PURVIV2"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/The-SigmaCoder/PURVIV2"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
 
 
 
