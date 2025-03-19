@@ -226,8 +226,7 @@ async def my_cloned_bots(client, message, _):
         await message.reply_text("An error occurred while fetching your cloned bots.")
 
 
-executor = ThreadPoolExecutor(max_workers=10)  # 10 bots एक साथ start होंगे
-successful_bots = []  # सफलतापूर्वक start हुए bots की list
+executor = ThreadPoolExecutor(max_workers=10)  # 10 bots at a time
 
 def check_bot_token(bot_token):
     """Check if bot token is valid before starting."""
@@ -254,19 +253,15 @@ def start_clone_bot(bot_token):
         bot = asyncio.run(ai.get_me())
         CLONES.add(bot.id)
 
-        bot_info = f"✅ **{bot.first_name}** (`{bot.username}`)"
-        successful_bots.append(bot_info)  # List में bot info add करो
-
         logging.info(f"Started bot: {bot.username}")
     except Exception as e:
         logging.error(f"Error in starting bot {bot_token}: {e}")
 
 async def restart_bots():
     """Restart all bots using threading."""
-    global CLONES, successful_bots
+    global CLONES
     logging.info("Restarting all cloned bots...")
-    
-    successful_bots.clear()  # पुरानी bot list clear करो
+
     bots = list(clonebotdb.find())
     bot_tokens = [bot["token"] for bot in bots]
 
@@ -275,12 +270,7 @@ async def restart_bots():
 
     await asyncio.gather(*tasks)
 
-    # Start हुए bots की list बनाओ
-    bot_list_message = "\n".join(successful_bots) if successful_bots else "❌ कोई भी bot start नहीं हुआ।"
-    
-    # Log group में send करो
-    await app.send_message(CLONE_LOGGER, f"**All Cloned Bots Started!**\n\n{bot_list_message}")
-
+    await app.send_message(CLONE_LOGGER, "All Cloned Bots Started!")
 
 @app.on_message(filters.command("cloned"))
 @language
