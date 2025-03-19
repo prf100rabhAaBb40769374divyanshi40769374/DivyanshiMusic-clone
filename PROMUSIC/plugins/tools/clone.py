@@ -11,7 +11,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     AccessTokenInvalid,
 )
 from PROMUSIC.utils.database import get_assistant
-from concurrent.futures import ThreadPoolExecutor
+#from concurrent.futures import ThreadPoolExecutor
 from config import API_ID, API_HASH
 from PROMUSIC import app
 from config import OWNER_ID
@@ -181,7 +181,55 @@ async def delete_cloned_bot(client, message, _):
         logging.exception(e)
 
 
+async def restart_bots():
+    global CLONES
+    try:
+        logging.info("Restarting all cloned bots........")
+        bots = list(clonebotdb.find())
+        for bot in bots:
+            bot_token = bot["token"]
 
+            # Check if the bot token is valid
+            url = f"https://api.telegram.org/bot{bot_token}/getMe"
+            response = requests.get(url)
+            if response.status_code != 200:
+                logging.error(f"Invalid or expired token for bot: {bot_token}")
+                continue  # Skip this bot and move to the next one
+
+            ai = Client(
+                f"{bot_token}",
+                API_ID,
+                API_HASH,
+                bot_token=bot_token,
+                plugins=dict(root="RAUSHAN.cplugin"),
+            )
+            await ai.start()
+
+            # Set bot's "Description" AutoMatically On Every Restart
+            def set_bot_desc():
+                url = f"https://api.telegram.org/bot{bot_token}/setMyDescription"
+                params = {"description": C_BOT_DESC}
+                response = requests.post(url, data=params)
+                if response.status_code == 200:
+                    logging.info(f"Successfully updated Description for bot: {bot_token}")
+                else:
+                    logging.error(f"Failed to update Description: {response.text}")
+
+            # set_bot_desc()
+
+            bot = await ai.get_me()
+            if bot.id not in CLONES:
+                try:
+                    CLONES.add(bot.id)
+                except Exception:
+                    pass
+            await asyncio.sleep(5)
+
+        await app.send_message(
+                CLONE_LOGGER, f"All Cloned Bots Started !"
+            )
+    except Exception as e:
+        logging.exception("Error while restarting bots.")
 
 
 @app.on_message(filters.command("delallclone") & filters.user(OWNER_ID))
@@ -225,42 +273,6 @@ async def my_cloned_bots(client, message, _):
         logging.exception(e)
         await message.reply_text("An error occurred while fetching your cloned bots.")
 
-async def start_clone_bot(bot_token):
-    try:
-        # Check if the bot token is valid
-        url = f"https://api.telegram.org/bot{bot_token}/getMe"
-        response = requests.get(url)
-        if response.status_code != 200:
-            logging.error(f"Invalid or expired token for bot: {bot_token}")
-            return
-
-        ai = Client(
-            f"{bot_token}",
-            API_ID,
-            API_HASH,
-            bot_token=bot_token,
-            plugins=dict(root="PROMUSIC.cplugin"),
-        )
-        await ai.start()
-
-        bot = await ai.get_me()
-        CLONES.add(bot.id)
-
-        logging.info(f"Started bot: {bot.username}")
-    except Exception as e:
-        logging.error(f"Error in starting bot {bot_token}: {e}")
-
-async def restart_bots():
-    global CLONES
-    logging.info("Restarting all cloned bots...")
-    
-    bots = list(clonebotdb.find())
-    bot_tokens = [bot["token"] for bot in bots]
-
-    # Run all bot startups concurrently
-    await asyncio.gather(*[start_clone_bot(token) for token in bot_tokens])
-
-    await app.send_message(CLONE_LOGGER, "All Cloned Bots Started!")
 
 @app.on_message(filters.command("cloned"))
 @language
