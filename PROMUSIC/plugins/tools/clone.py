@@ -11,6 +11,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     AccessTokenInvalid,
 )
 from PROMUSIC.utils.database import get_assistant
+from concurrent.futures import ThreadPoolExecutor
 from config import API_ID, API_HASH
 from PROMUSIC import app
 from config import OWNER_ID
@@ -181,42 +182,7 @@ async def delete_cloned_bot(client, message, _):
 
 
 
-async def start_clone_bot(bot_token):
-    try:
-        # Check if the bot token is valid
-        url = f"https://api.telegram.org/bot{bot_token}/getMe"
-        response = requests.get(url)
-        if response.status_code != 200:
-            logging.error(f"Invalid or expired token for bot: {bot_token}")
-            return
 
-        ai = Client(
-            f"{bot_token}",
-            API_ID,
-            API_HASH,
-            bot_token=bot_token,
-            plugins=dict(root="PROMUSIC.cplugin"),
-        )
-        await ai.start()
-
-        bot = await ai.get_me()
-        CLONES.add(bot.id)
-
-        logging.info(f"Started bot: {bot.username}")
-    except Exception as e:
-        logging.error(f"Error in starting bot {bot_token}: {e}")
-
-async def restart_bots():
-    global CLONES
-    logging.info("Restarting all cloned bots...")
-    
-    bots = list(clonebotdb.find())
-    bot_tokens = [bot["token"] for bot in bots]
-
-    # Run all bot startups concurrently
-    await asyncio.gather(*[start_clone_bot(token) for token in bot_tokens])
-
-    await app.send_message(CLONE_LOGGER, "All Cloned Bots Started!")
 
 @app.on_message(filters.command("delallclone") & filters.user(OWNER_ID))
 @language
@@ -259,6 +225,52 @@ async def my_cloned_bots(client, message, _):
         logging.exception(e)
         await message.reply_text("An error occurred while fetching your cloned bots.")
 
+
+executor = ThreadPoolExecutor(max_workers=10)  # 10 bots at a time
+
+def check_bot_token(bot_token):
+    """Check if bot token is valid before starting."""
+    url = f"https://api.telegram.org/bot{bot_token}/getMe"
+    response = requests.get(url)
+    return response.status_code == 200
+
+def start_clone_bot(bot_token):
+    """Start a bot in a separate thread."""
+    if not check_bot_token(bot_token):
+        logging.error(f"Invalid or expired token for bot: {bot_token}")
+        return
+    
+    try:
+        ai = Client(
+            f"{bot_token}",
+            API_ID,
+            API_HASH,
+            bot_token=bot_token,
+            plugins=dict(root="PROMUSIC.cplugin"),
+        )
+        asyncio.run(ai.start())  # Running async function in a separate thread
+
+        bot = asyncio.run(ai.get_me())
+        CLONES.add(bot.id)
+
+        logging.info(f"Started bot: {bot.username}")
+    except Exception as e:
+        logging.error(f"Error in starting bot {bot_token}: {e}")
+
+async def restart_bots():
+    """Restart all bots using threading."""
+    global CLONES
+    logging.info("Restarting all cloned bots...")
+
+    bots = list(clonebotdb.find())
+    bot_tokens = [bot["token"] for bot in bots]
+
+    loop = asyncio.get_event_loop()
+    tasks = [loop.run_in_executor(executor, start_clone_bot, token) for token in bot_tokens]
+
+    await asyncio.gather(*tasks)
+
+    await app.send_message(CLONE_LOGGER, "All Cloned Bots Started!")
 
 @app.on_message(filters.command("cloned"))
 @language
